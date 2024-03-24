@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="script.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,600;0,700;1,100;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Malay Folktales</title>
+</head>
+<body>
+    <section class="banner">
+    <nav>
+        <a href="mukasatu.html"><img src="gambar/logoss.png"></a>
+        <div class="link" id="navLink">
+            <i class="fa fa-close" onClick="hideMenu()"></i>
+            <ul>
+                <li><a href="mukasatu.html">Home</a></li>
+                <li><a href="mukadua.html">Folktales</a></li>
+                <li><a href="mukatiga.html">Keris</a></li>
+                <li><a href="mukaempat.html">Kepercayaan</a></li>
+            </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+
+<div class="ruangan">
+    <h1>Elements of Melayu</h1>
+    <p>Come and Join me to learn Malay cultures and mystical stuffs</p>
+</div>
+    </section>
+
+<!------------------------------slide images----------->
+<div class="slideshow">
+    <div class="mySlides fade">
+        <div class="numbertext">1/4</div>
+        <a href="mukadua.html"><img src="gambar/ledang.jpg" style="width: 100%"></a>
+        <div class="text">Putri G. Ledang</div>
+    </div>
+
+    <div class="mySlides fade">
+        <div class="numbertext">2/4</div>
+        <a href="mukatiga.html"><img src="gambar/keris.png" style="width: 100%"></a>
+        <div class="text">Keris-keris</div>
+    </div>
+
+    <div class="mySlides fade">
+        <div class="numbertext">3/3</div>
+        <a href=""><img src="gambar/pinggan.jpg" style="width: 100%"></a>
+        <div class="text">Pinggan Mangkuk</div>
+    </div>
+
+    <div class="mySlides fade">
+        <div class="numbertext">4/4</div>
+        <a href="mukatiga.html"><img src="gambar/tanjak.jpg" style="width: 100%"></a>
+        <div class="text">Tanjak</div>
+    </div>
+
+    <!-----------next and previous button------->
+    <a class="prev" onClick="plusSlides(-1)">&#10094</a>
+    <a class="next" onclick="plusSlides(1)">&#10095</a>
+</div>
+<br>
+
+<!-----------------the dots/circle----------->
+<div style="text-align: center;">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(4)"></span>
+</div>
+
+
+
+    <!----------------------The Coder section---------------------->
+<section class="selection">
+    <h1>Senang Datang</h1>
+    <h3>Let me present to you the solo coding ranger</h3>
+    
+    <div class="row">
+
+    <div class="course-col">
+    <img src="gambar/coder.jpg">
+    </div>
+
+    <div class="course-col2">
+        <h1>The Coder</h1>
+        <p>Hii, My Name is Alham</p>
+        <p>I wrote this website using VS Code free version as my code editor </p>
+        <p>There are total of 3 languages I used ; HTML, CSS and Javascript</p>
+        <p> I hope the best luck for all my classmates writing codes!!!
+        </p>
+    </div>
+</section>
+
+<!---------------------------Disclaimer(dont delete)--------------->
+<section class="warning">
+    <h1> Disclaimer !!! </h1>
+
+    <div class="war">
+        <p>This sharing is merely my interest in folktales and tradition
+            <br><br>
+        None of the contents here represent the actual histories, figures or even faith 
+            <br><br>
+        I just want to share the informations <br>because my late mother used to tell me these stories for my bedtime
+            <br><br>
+        In addition, some Malay folklores are no longer practised as it against Islamic faith.
+            <br><br>
+        But, i simply cannot let my ancestors stories vanish in a thin air.
+            <br><br>
+        Thus, here I am sharing with you guys.
+            <br><br>
+        Selamat Menelaah
+        </p>
+
+    </div>
+</section>
+
+<!---------------- (menu and close function)------>
+<script>
+    var navLink = document.getElementById("navLink")
+
+    function showMenu(){
+        navLink.style.right ="0"
+    }
+
+    function hideMenu(){
+        navLink.style.right ="-200px"
+    }
+    </script>
+
+<script>
+    let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+</script>
+</body>
+</html>
